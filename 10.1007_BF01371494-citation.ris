@@ -1,0 +1,20 @@
+TY  - JOUR
+AU  - Wagner, H. -J.
+AU  - Schumacher, A.
+AU  - Alavi, M.
+AU  - Fabula, T.
+AU  - Schmidt, B.
+PY  - 1995
+DA  - 1995/09/01
+TI  - Monolithic bridge-on-diaphragm structure for pressure sensor applications
+JO  - Microsystem Technologies
+SP  - 191
+EP  - 195
+VL  - 1
+IS  - 4
+AB  - Monolithically clamped bridge-on-diaphragm (BOD) structures for pressure sensor applications were fabricated by means of Nd: YAG-laser micromachining and anisotropic KOH-etching techniques. The pressure/frequency-dependence of the BOD structures was measured by acoustical resonance excitation and optical detection of the microbridge and applying an external pressure between-0.8 bar and+1 bar to the diaphragm. In this vacuum/atmospheric pressure range the pressure/frequency-characteristic is quite linear with a sensitivity of about 4.5 kHz/bar and a fundamental bridge resonance frequency of 82 kHz. Extensive finite-element modelling has been carried out to optimize the geometrical dimensions of the BOD structures with respect to maximum sensitivity and pressure range. Using the same BOD structure layout it is possible to realize pressure sensors with applications ranging from 0.5 to 12 bar by only varying the thickness of the diaphragm. Varying the BOD structure layout to smaller dimensions the pressure sensors can be operated up to 100 bar with sensitivities of about 141 Hz/bar.
+SN  - 1432-1858
+UR  - https://doi.org/10.1007/BF01371494
+DO  - 10.1007/BF01371494
+ID  - Wagner1995
+ER  - 
