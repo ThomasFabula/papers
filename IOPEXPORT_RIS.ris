@@ -1,0 +1,18 @@
+TY  - JOUR
+DO  - 10.1088/0022-3735/21/12/005
+UR  - http://dx.doi.org/10.1088/0022-3735/21/12/005
+TI  - Real-time data acquisition system for laser and radio frequency spectroscopy
+T2  - Journal of Physics E: Scientific Instruments
+AU  - Brenner, T
+AU  - Buttgenbach, S
+AU  - Fabula, T
+AU  - Rupprecht, W
+PY  - 1988
+DA  - 1988/12
+PB  - IOP Publishing
+SP  - 1150-1153
+IS  - 12
+VL  - 21
+SN  - 0022-3735
+AB  - A low-cost real-time data acquisition system utilising a master (PC-XT) and a slave (Z80) computer for high-resolution atomic spectroscopy is described. The master and the slave computer are linked by a high-speed parallel FIFO buffer permitting data acquisition on a fixed time schedule with 4 mu s time resolution. A modular interface box allows the system to control complex spectroscopic experiments. The use of commercial software packages allows fast and efficient data reduction and analysis on the same computer system. The performance of the system has been demonstrated in polarisation spectroscopy experiment on zirconium.
+ER  - 
