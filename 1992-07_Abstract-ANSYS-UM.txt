@@ -1,0 +1,25 @@
+FE-Modellierung für den Entwurf resonanter Mikrosensoren
+
+Th.Fabula
+
+Hahn-Schickard-Institut für 
+Mikro- und Informationstechnik, VS-Villingen
+
+
+Bei der Realisierung von mikromechanischen Systemen sind für die Bauelementfunktion die technologisch zu realisierenden Funktionsprinzipien und die prozeßtechnischen Randbedingungen bereits in der Entwurfsphase zu berücksichtigen. Reale mikromechanische Komponenten zeigen aufgrund der Miniaturisierung und des hohen Integrationsgrades eine starke Wechselwirkung verschiedener physikalischer Einflußgrößen, die zu einer Überlagerung von unerwünschten Störeinflüssen führen können. Mit Hilfe der Finite-Elemente Methode werden der Einfluß der physikalischer Parameter auf das Systemverhalten und die Auswirkung prozeßabhängiger Materialeigenschaften mikrotechnisch hergestellter Dünnschichtsysteme modelliert. Die Ergebnisse gekoppelter Finite-Elemente Berechnungen unter Einschluß innerer Schichtspannungen und die Berücksichtigung der piezoelektrischen Anregung an mikromechanischen Strukturen in Dünnschichtaufbau (sog. Multilayerstrukturen) ermöglichen eine gezielte Vorhersage des Verhaltens von piezoelektrisch angeregten Dünnschichtsystemen.
+
+Der Vortrag geht auf die Untersuchungen von resonanten mikromechanischen Sensoren ein, die durch ihr frequenzanaloges Ausgangssignal für die Präzisionsmessung verschiedener physikalischer Größen (z.B. Kraft, Druck, Temperatur) besonders geeignet sind. In den FE-Berechnungen finden die kristallrichtungs- und temperaturabhängigen Materialeigenschaften und der Einfluß der mikrotechnisch spezifischen Randbedingungen (z.B. Schichteigenspannungen) Berücksichtigung. Mit Hilfe dynamischer Berechnungen (Modalanalyse) werden die Eigenfrequenzen und -schwingungsformen der resonanten Sensoren bestimmt. Der Einfluß der zu untersuchenden Meßgröße (Druck- bzw. Kraftempfindlichkeit) wird durch eine nichtlineare, statische FE-Rechnung ermittelt, bei welcher die durch die Meßgröße hervorgerufene Steifigkeitsänderung des Gesamtsystems bestimmt wird. Diese wird zur Ermittlung der Frequenzverschiebung des vorgespannten Sensors herangezogen. Um das Frequenzgangverhalten (Amplitudenspektrum, Impedanzverlauf) des resonanten Sensors zu berechnen, muß die Anregung über piezoelektrische Dünnschichtsysteme mit modelliert und die Kopplung verschiedener Felder (elektrisches Potential - Knotenverschiebungen) berücksichtigt werden. Von besonderem Interesse für die Resonatoroptimierung sind hierbei z.B. Aussagen über die Formgebung des Resonators und der günstigsten Schichtdickenverhältnisse zwecks maximaler elektromechanischer Kopplung. Elektrische und optische Meßverfahren dienen zur Charakterisierung der resonanten Mikrosensoren und zur experimentellen Verifizierung der Berechnungsergebnisse. Durch einen Vergleich mit den experimentellen Meßergebnissen werden die Grenzen der Finite-Elemente Berechnungsmethode und die erreichbaren Modellierungsgenauigkeiten aufgezeigt und diskutiert.
+
+
+
+Thomas Fabula
+Hahn-Schickard-Institut für Mikro- und Informationstechnik, 
+Abteilung: Entwurf und Simulation
+D-7730 VS-Villingen, Roggenbachstraße 6
+Tel.: 07721 - 2002-31, Fax.: - 2002-29
+						
+eingereicht als Vortragsbeitrag beim 
+10. ANSYS Users' Meeting 1992 in Arolsen
+7/92
+
+
