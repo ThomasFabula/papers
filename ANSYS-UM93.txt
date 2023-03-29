@@ -1,0 +1,107 @@
+Gekoppelte Feldberechnung eines mikromechanischen Strömungssensors
+
+Thomas Fabula, Nicolaus Hey, Stephan Messner
+
+Institut für Mikro- und Informationstechnik der
+Hahn-Schickard-Gesellschaft für angewandte Forschung e.V.,
+D-78052 Villingen-Schwenningen, Wilhelm-Schickard-Straße 10
+
+
+
+Einleitung
+
+Im Rahmen eines vom BMFT geförderten Verbundprojektes wurden resonante mikromechanische Silizium-Balkenstrukturen mit elektrothermischer Anregung und resistiver Abtastung mittels NiCr-Dehnmeßstreifen (DMS) für die Anwendung als Kraft- und Strömungssensoren hergestellt [ABV93]. Mit Finite-Elemente-Berechnungsmethoden sollten die Sensoreigenschaften, insbesondere die thermische Fluid-Struktur-Wechselwirkung und das dynamische Verhalten untersucht, sowie die Frequenzempfindlichkeit gegenüber Strömungen optimiert werden [Mes93]. Mit ANSYS erfolgte die Modellaufbereitung und die strukturmechanischen Berechnungen, bei denen die Eigenfrequenzen und -schwingungsformen bei unterschiedlichen Temperaturbelastungen ermittelt wurden. Die Berechnung der Abkühlung des Sensors durch das vorbeiströmende Fluid erfolgte mit FIDAP. Strömungsberechnungen wurden mit FLOTRAN zusätzlich durchgeführt, um die Ergebnisse mit FIDAP zu vergleichen (wird im Vortrag diskutiert). Mit Hilfe von elektrischen und optischen Meßmethoden konnten die thermisch bedingten statischen Auslenkungen, das temperaturabhängige Frequenzverhalten sowie die Strömungsempfindlichkeit ermittelt werden. Hierdurch konnten die experimentellen Daten zur Modellbildung herangezogen und die Einflüsse der Randbedingungen bei den Berechnungen überprüft werden. 
+
+
+Funktionsprinzip des resonanten Strömungssensors
+
+Das frequenzanaloge Sensorprinzip beruht auf der Abhängigkeit der Eigenfrequenz eines Resonators von einer äußeren physikalischen Größe (z. B. Druck, Kraft, Temperatur), indem die innere Spannung beeinflußt oder die Trägheit des Resonators über eine Massenbelegung verändert wird. Die Resonanzfrequenz stellt als Meßgröße ein quasidigitales Ausgangssignal dar, so daß durch Vergleich mit einer Referenzfrequenz auf die äußere physikalische Meßgröße zurückgeschlossen werden kann.
+
+Bei dem hier untersuchten resonanten Strömungssensor ändert sich die mechanische Spannung im Resonator infolge thermischer Einflüsse, da die auf der Sensoroberfläche aufgebrachten Widerstände elektrische Verlustleistung in Wärme umsetzen. Infolge der festen Einspannung des Sensors wird die temperaturabhängige Ausdehnung des Resonators verhindert, so daß sich mechanische Spannungen aufbauen. Der Sensor kühlt sich in Abhängigkeit der Geschwindigkeit eines strömenden Gases ab. Diese Abkühlung führt zu einer Änderung der Spannungsverteilung, die eine Änderung der Resonanzfrequenz zur Folge hat. Die Grundstruktur des Sensors besteht aus einem 50 μm dicken, 1 mm breiten und 10 mm langen Silizium-Biegebalken. Dieser ist von einem etwa 380 μm dicken und damit vergleichsweise starren Siliziumrahmen umgeben. In Bild 1 ist ein Schnitt durch den Sensoraufbau schematisch dargestellt.
+
+Das Grundmaterial des Sensors ist Silizium, wobei herstellungsbedingt auf der Sensoroberfläche eine Siliziumdioxid-Schicht (SiO2) aufgebracht ist. Die Widerstände und Leiterbahnen, die auf der Sensoroberfläche aufgebracht sind, werden bei der Simulation nicht berücksichtigt, da deren mechanischer Einfluß auf die Simulationsergebnisse aufgrund der geringen Schichtdicken zu vernachlässigen ist. Der Sensor ist auf einem Keramikträger befestigt, dessen Einfluß auf das Sensorverhalten im weiteren untersucht werden soll. 
+
+
+Strukturmechanische Modellierung
+
+Um das thermische Verhalten des Sensors zu untersuchen, wurden die Eigenfrequenzen unter homogener Temperaturlast in einer strukturmechanischen Simulation berechnet. In einer ersten Näherung wurde von einer homogenen Temperaturverteilung ausgegangen. In Bild 2 ist die Resonanzfrequenz der Grundbiegeschwingung in Abhängigkeit der Temperaturdifferenz dargestellt. Es werden die experimentellen Werte, die an die Messungen analytisch angepaßten und die mit ANSYS50 simulierten Kurvenverläufe verglichen.
+
+Die Kurven lassen sich in zwei Bereiche unterteilen. Ausgehend von der Grundfrequenz im unbelasteten Zustand nimmt die Resonanzfrequenz bei zunehmender Temperaturdifferenz ΔT ab, da sich in diesem Bereich Druckspannungen im Resonator aufbauen. Bei einer bestimmten Temperatur erreichen die Druckspannungen den Wert der kritisch Knicklast. Wird diese kritische Temperatur überschritten, so knickt der Balken aus. Bei diesem Zustand stellen sich infolge weiterer Temperaturerhöhung nur Zugspannungen ein, die zu einer Frequenzzunahme führen. Bei den Messungen wurde die Temperaturüberhöhung über die Verlustleistung der DMS-Widerstände eingestellt. Der Zusammenhang zwischen Temperaturdifferenz und DMS-Leistung wurde zu ΔT = 0,084PDMS ermittelt [Bar93].
+
+Bei der Simulation mit ANSYS50 wurde ein zweidimensionales Modell nach Bild 1 mit homogenen Temperaturlasten definiert (bf,all,temp,...). Mit diesem Modell wurde ein nichtlinearer statischer Berechnungslauf (antype,static) durchgeführt, bei dem 'large deflection', 'stress stiffening' und 'prestress' berücksichtigt wurden. In diesem Berechnungslauf wurden Spannungen ermittelt, die sich infolge der Temperaturlasten einstellen. In einer anschließenden Modalanalyse (antype,modal) wurden die Resonanzfrequenzen berechnet.
+
+Für die Berechnung der Spannungsverteilung "nach dem Ausknicken" des Balkens, ist es erforderlich 'large deflection' und 'stress stiffening' zu berücksichtigen. Um anschließend eine Modalanalyse mit der verspannten Struktur durchführen zu können, muß 'prestress' eingeschaltet sein. Da jedoch die Kombination von 'large deflection' und 'prestress' zu Problemen führt, wurde die Modalanalyse schrittweise (psolve) durchgeführt.
+
+Anhand des zweidimensionalen Modells wurden eine Reihe von Modellparameter (Netzfeinheit, Materialdaten und Sensoraufbau), die die Berechnungsergebnisse beeinflussen, untersucht. Es zeigte sich, daß ein relativ grobes Netz genügt, die Resonanzfrequenzen ausreichend genau zu berechnen. Der Balken wurde mit zwei Elementen über die Dicke und 26 Elementen über die Länge vernetzt, was zu einem Modell mit ca. 200 Elementen führte. Die Auswirkung temperaturabhängiger und -unabhängiger Materialdaten und der Einfluß der verschiedenen Materialschichten auf das Resonatorverhalten ist in Bild 3a für die Grundmode dargestellt.
+
+Bei zunehmender Temperatur nimmt der Einfluß der Temperaturabhängigkeit der Materialdaten zu. Bei einer Temperaturdifferenz von 60°C beträgt die Abweichung bei der Grundschwingungsmode ca. 15 %, so daß bei der Simulation die Temperaturabhängigkeit der Materialdaten mit zu berücksichtigen ist. Im Gegensatz zur Siliziumdioxidschicht, die einen geringen Einfluß auf die Resonanzfrequenz hat (< 4 %), verändert die Berücksichtigung des Keramikträgers das Sensorverhalten grundlegend. Ausgehend von der Grundfrequenz erhöht sich die Resonanzfrequenz bei zunehmender Temperatur stetig. Infolge des hohen thermischen Ausdehnungskoeffizienten der Keramik (dreifach größer als bei Silizium) bauen sich im Resonator bei Erwärmung sofort Zugspannungen auf, die zu einer Erhöhung der Resonanzfrequenz bei der Grundmode führen. Bei der 1. unsymmetrischen Obermode, die in Bild 3b dargestellt ist, nimmt die Resonanzfrequenz ohne Berücksichtigung des Keramikträgers bis zur kritischen Temperaturdifferenz ab und bleibt dann konstant. Berücksichtigt man den Einfluß des Keramikträgers steigt die Resonanzfrequenz mit zunehmender Temperatur.
+
+In Bild 4 ist ein Vergleich der Auslenkung der Balkenmitte in Abhängigkeit der Temperaturdifferenz zwischen Messung und Simulation dargestellt. Die Simulationsergebnisse entstanden mit einem Modell, bei dem temperaturabhängige Materialdaten berücksichtigt und der Keramikträger vernachlässigt wurden. Für die Messungen wurde ein optisches Tastschnittgerät (UBM) verwendet. Es wurde an vier verschiedenen Sensoren gemessen, um die Bauteiltoleranzen zu ermitteln.
+
+Die berechnete Kurve stimmt mit den gemessenen Werten gut überein. Die kritische Temperaturdifferenz kann bei der Simulation im Gegensatz zu den Messungen sehr gut bestimmt werden und liegt bei etwa 27°C. Bis zu dieser Temperatur ist der Balken nur geringfügig ausgelenkt. Wird diese Temperatur überschritten, knickt der Balken aus und die Auslenkung nimmt stark zu. Berücksichtigt man den Keramikträger, wird der Balken infolge der hohen Zugspannungen nicht nennenswert ausgelenkt (≤ 1 μm).
+
+Zur Kontrolle der zweidimensionalen Modelle und zur Ermittlung der ersten Torsionsmode, wurde ein dreidimensionales Modell erstellt. Anhand dieses Modells konnte außerdem der Einfluß temperaturabhängiger anisotroper Materialdaten von Silizium (SOLID64; tb,anel; tbtemp; tbdata) auf die Berechnungsergebnisse untersucht werden. Die Abweichungen zwischen zwei- und dreidimensionalem Modell betragen bei den Frequenzen ca. 12 %. Die Torsionsmode liegt bei etwa 30 kHz und zeigt nur eine schwache Temperaturabhängigkeit.
+
+
+Strömungsmechanische Modellierung
+
+Die Temperaturverteilung, die sich infolge einer Gasströmung (Luft) einstellt, wurde in einer strömungsmechanischen Simulation mit FIDAP ermittelt. Die Geometrie des Modells, das dabei verwendet wurde, ist in Bild 5 schematisch dargestellt. 
+
+Der Sensor ist in der Mitte des Srömungsrohres auf dem Keramikträger befestigt. Der Keramikträger ist auf zwei Metallstiften gelagert, die bei der Simulation nicht berücksichtigt werden. Dieser Aufbau stand auch für Messungen zur Verfügung [Wie93]. Die Wärmequellen, die die Heiz- und DMS-Widerstände darstellen, wurden in FIDAP zum Teil zusammengefaßt und als drei Wärmequellen modelliert (source(heat, ...)). An den Lagerungspunkten des Keramikträgers wurden Wärmesenken definiert, indem der Temperaturfreiheitsgrad der Knoten in diesem Bereich auf 20°C festgesetzt wurde. Der Keramikträger hat im Bereich des Resonators eine Aussparung. Um jedoch die Wärmeausdehnung des Keramikträgers bei einer anschließenden strukturmechanischen Simulation mit demselben Modell berücksichtigen zu können, wurde der Keramikträger durchgängig modelliert. Der Randbereich um den Sensor herum mußte sehr fein vernetzt werden, da in diesem Bereich sehr hohe Druckgradienten auftreten. Zusätzlich wurden in Längsrichtung des Rohres einige Elemente mehr eingesetzt, um Aspektverhältnisse ≤ 10 zu erreichen. Das verwendete Modell besteht aus 7864 Elementen.
+
+Mit diesem Modell wurde der Einfluß der Wärmequellen und -senken auf die Temperaturverteilung über dem Sensor ohne Strömungseinfluß untersucht. In Bild 6 ist die berechnete Temperaturverteilung an der Sensoroberfläche dargestellt. Diese Berechnung wurde unter Berücksichtigung folgender Annahmen durchgeführt:
+
+	● Wärmequelle in der Mitte des Resonators:		5109 W/m²,
+	● Wärmequellen am Rand des Resonators:		3109 W/m²
+	● Wärmesenken an der Unterseite des Keramikträgers:	T = 20°C
+
+
+
+Um einen Anhaltspunkt über die tatsächliche Temperaturverteilung an der Sensoroberfläche zu erhalten, wurden Thermographiemessungen (IR-Aufnahmen) am Sensor durchgeführt [Mes93]. In der Simulation wurde versucht diese Temperaturverteilung nachzubilden. Die maximale Temperatur in Balkenmitte beträgt etwa 100°C, der Temperaturunterschied zu den Sensorrändern ungefähr 26°C.
+
+Mit diesem Modell und den oben beschriebenen thermischen Randbedingungen wurde die Temperaturverteilung in Abhängigkeit der Strömungsgeschwindigkeit berechnet. Dazu wurde zuerst die reine Geschwindigkeitsverteilung (T = const.) berechnet, bei der die elementspezifische Reynoldszahl auf eins gesetzt wurde (icnode(velo,stokes)), um eine gut konvergierende Lösung zu erhalten. In Bild 7a ist die Geschwindigkeitsverteilung für eine Anfangsgeschwindigkeit am Rohreintritt von v0 = 0,6 m/s dargestellt. Diese Geschwindigkeitsverteilung wurde als Anfangsbedingung bei der gekoppelten Geschwindigkeits-Temperaturfeld-Berechnung vorgegeben. In Bild 7b ist die zugehörige Temperaturverteilung dargestellt.
+
+Bei allen Berechnungen mit FIDAP wurde der direkte "successive substitution" Gleichungslöser eingesetzt. Der Druck-Freiheitsgrad wurde mit der "penalty-Funktion" eliminiert, was zu einem Modell mit 24177 Freiheitsgraden führte. Die Rechenzeiten auf einer HP730 betrugen zwischen 15 min für die Berechnung der Temperaturverteilung ohne Strömung und 1h für die Berechnung des Geschwindigkeitsfeldes bei einer Anfangsgeschwindigkeit von v0 = 2 m/s am Rohreintritt.
+
+
+Gekoppelte Feldberechnung
+
+Die Abhängigkeit der Resonanzfrequenz von der Strömungsgeschwindigkeit des Gases (Sensorkennlinie) erhält man über die Kopplung des strömungsmechanischen mit dem strukturmechanischen Modell, indem mit der Temperaturverteilung, die sich infolge der Strömung einstellt, die Verspannungen im Sensor und die Resonanzfrequenzen berechnet werden. Da es im Moment kein kommerzielles Programm gibt, mit dem diese gekoppelte Berechnung direkt durchgeführt werden kann, wurden die Programmpakete ANSYS und FIDAP über die implementierten Schnittstellen (Bild 8) verbunden.
+
+Die Modellgenerierung erfolgt in ANSYS44A. Über die Schnittstelle ANSFID werden die Geometriedaten und Randbedingungen, wie z.B. die Anfangsgeschwindigkeit v0(x=0) am Rohreintritt, an FIDAP übergeben. Dazu wird das FILE28 benötigt, in das die Modelldaten von ANSYS abgelegt werden (cdwrite). Das Programm ANSFID erzeugt anschließend die Datei FIMESH, in der die Modelldaten für FIDAP enthalten sind. Die Strömungssimulation in FIDAP ist in oben beschriebener Weise aufgespalten. In FIDAP gibt es die Möglichkeit einzelne Freiheitsgrade in eine von ANSYS lesbare Datei zu schreiben (neutral(ANSYS,...). Auf diese Art werden die Knotentemperaturen, die in FIDAP berechnet wurden, an ANSYS übergeben. Mit dieser Temperaturverteilung erfolgt in ANSYS50 zunächst eine statische Analyse, bei der die mechanischen Spannungen im Modell berechnet werden, um anschließend mit der verspannten Struktur eine Modalanalyse durchzuführen. Da die zur Verfügung stehende Version 6.04 von FIDAP nur ANSYS44A unterstützt, mußten die Dateien, in denen die Knotentemperaturen enthalten sind, mit dem UNIX-Hilfsprogramm 'awk' konvertiert werden ('nt' muß durch 'bf' ersetzt werden).
+
+Um den Einfluß verschiedener Modellparameter auf die Sensorkennlinie zu untersuchen, wurden verschiedene Modelle berechnet. In Bild 9 ist die Sensorkennlinie für zwei verschiedene Modelle dargestellt. Die beiden Modelle unterscheiden sich durch unterschiedliche Wärmequellen und -senken. Es wurde jedoch darauf geachtet, daß bei beiden Modellen die Temperaturverteilung ohne Strömung näherungsweise mit den gemessenen Werten identisch ist.
+
+
+
+Die Empfindlichkeit des Sensors ohne Wärmesenke beträgt etwa 2500 Hz / m/s und ist erheblich höher als die Empfindlichkeit des Sensors mit  Wärmesenke,  die  ungefähr  130 Hz / m/s beträgt. Die größte Frequenzänderung findet im Bereich zwischen 0 und 1 m/s statt, da in diesem Bereich der Temperaturgradient am größten ist. Der charakteristische V-förmige Verlauf (siehe Bild 2) ist bei diesen Kurven nicht zu beobachten. Das liegt zum einen daran, daß der Keramikträger berücksichtigt wurde und zum anderen liegen bei diesen Strömungsgeschwindigkeiten die Sensortemperaturen oberhalb der kritischen Temperatur. Bei dem Modell mit Wärmesenken liegen die maximalen Temperaturen zwischen 85 und 100°C, bei dem Sensor ohne Wärmesenke zwischen 28 und 100°C.
+
+
+
+
+Zusammenfassung
+
+Zur Charakterisierung des mechanischen Verhaltens eines frequenzanalogen Siliziumsensors mit elektrothermischer Anregung und resistiver Abtastung unter Temperaturlasten wurde ein zweidimensionales Simulationsmodell erstellt. Anhand dieses Modells wurden FEM-Berechnungen durchgeführt und der Einfluß verschiedener Modellparameter auf die Ergebnisse untersucht. Die Simulationsergebnisse zeigten eine gute Übereinstimmung mit analytischen Berechnungen und experimentell ermittelten Werten. Zur Betrachtung dreidimensionaler Effekte, wie z.B. der Einfluß anisotroper Materialdaten, wurde das zweidimensionale Modell erweitert, die Ergebnisse verglichen und die Abweichungen festgestellt.
+
+Zur gekoppelten Fluid-Struktur-Berechnung war es erforderlich, die Programmpakete ANSYS und FIDAP über vorhandene Schnittstellen zu verbinden. Es zeigte sich, daß die Übertragung der Modelldaten von ANSYS nach FIDAP mit dem Programm ANSFID und die Übertragung der Knotentemperaturen von FIDAP nach ANSYS problemlos funktionieren. Aufgrund der gekoppelten Berechnung, war es erforderlich für die strömungs- und strukturmechanische Simulation ein Geometriemodell zu erstellen, das allen Modellierungsanforderungen entspricht. Dabei sind vor allem die Anforderungen, die durch die strömungsmechanische Simulation an die Vernetzung (Element-Aspektverhältnis) gestellt werden, zu beachten.
+
+Es wurde gezeigt, daß die gekoppelte Fluid-Struktur-Berechnung mit den Programmpaketen ANSYS und FIDAP zwar möglich ist, aber die Ergebnisse der gekoppelten Berechnung nur qualitativ mit experimentell ermittelten Werten übereinstimmen. Bei der strömungsmechanischen Simulation wurde ein zweidimensionales Modell verwendet, bei dem mit einer laminaren Strömung gerechnet wurde und die thermischen und mechanischen Randbedingungen nicht genau bekannt waren. Diese Vereinfachungen und Vernachlässigungen sind im wesentlichen für die von den Messungen abweichenden Ergebnisse verantwortlich. Aus Rechenzeitgründen sind jedoch künftige dreidimensionale Simulationen nur mit einem voroptimierten FE-Modell sinnvoll.
+
+
+
+
+Danksagung
+
+Herrn Dr. H. Bartuch (GMS mbH, St. Georgen) sei für die Bereitstellung der Sensoren und Diskussion der Ergebnisse gedankt. Vergleichsrechnungen mit FLOTRAN wurden freundlicherweise von Herrn Dr. U. Göhner (CADFEM GmbH, Leonberg) zur Verfügung gestellt. Herrn Dr. K. Selig und Dipl.-Phys. D. Fischle (BIZERBA Werke GmbH & Co. KG, Balingen) sei für die Durchführung der Thermographiemessungen gedankt.
+
+
+
+Literatur
+
+[ABV93] : Abschlußbericht zum BMFT-Verbundvorhaben: Einsatz der Mikromechanik zur Herstellung frequenzanaloger Sensoren, VDI/VDE-IT, Berlin (1993)
+
+[Bar93] : H. Bartuch, S. Büttgenbach, Th. Fabula, H. Weiss, Resonante Silizium-Sensoren mit elektrothermischer Anregung und DMS in Metalldünnfilmtechnologie, SENSOR 93, Nürnberg, 12.-14. Oktober 1993
+
+[Mes93] : S. Messner, Finite Elemente Berechnung der Fluid-Struktur-Wechselwirkung bei einem mikromechanischen Strömungssensor, Diplomarbeit, Universität Stuttgart/HSG-IMIT, VS-Villingen (1993)
+
+[Wie93] : M.-C. Wiedemann, Entwicklung eines intelligenten Sensorsystems unter Nutzung eines elektrothermisch angeregten mikromechanischen Resonators, Diplomarbeit, FH-Kiel (1993)
