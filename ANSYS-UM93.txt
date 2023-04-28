@@ -26,7 +26,7 @@ Strukturmechanische Modellierung
 
 Um das thermische Verhalten des Sensors zu untersuchen, wurden die Eigenfrequenzen unter homogener Temperaturlast in einer strukturmechanischen Simulation berechnet. In einer ersten Näherung wurde von einer homogenen Temperaturverteilung ausgegangen. In Bild 2 ist die Resonanzfrequenz der Grundbiegeschwingung in Abhängigkeit der Temperaturdifferenz dargestellt. Es werden die experimentellen Werte, die an die Messungen analytisch angepaßten und die mit ANSYS50 simulierten Kurvenverläufe verglichen.
 
-Die Kurven lassen sich in zwei Bereiche unterteilen. Ausgehend von der Grundfrequenz im unbelasteten Zustand nimmt die Resonanzfrequenz bei zunehmender Temperaturdifferenz ΔT ab, da sich in diesem Bereich Druckspannungen im Resonator aufbauen. Bei einer bestimmten Temperatur erreichen die Druckspannungen den Wert der kritisch Knicklast. Wird diese kritische Temperatur überschritten, so knickt der Balken aus. Bei diesem Zustand stellen sich infolge weiterer Temperaturerhöhung nur Zugspannungen ein, die zu einer Frequenzzunahme führen. Bei den Messungen wurde die Temperaturüberhöhung über die Verlustleistung der DMS-Widerstände eingestellt. Der Zusammenhang zwischen Temperaturdifferenz und DMS-Leistung wurde zu ΔT = 0,084PDMS ermittelt [Bar93].
+Die Kurven lassen sich in zwei Bereiche unterteilen. Ausgehend von der Grundfrequenz im unbelasteten Zustand nimmt die Resonanzfrequenz bei zunehmender Temperaturdifferenz ΔT ab, da sich in diesem Bereich Druckspannungen im Resonator aufbauen. Bei einer bestimmten Temperatur erreichen die Druckspannungen den Wert der kritisch Knicklast. Wird diese kritische Temperatur überschritten, so knickt der Balken aus. Bei diesem Zustand stellen sich infolge weiterer Temperaturerhöhung nur Zugspannungen ein, die zu einer Frequenzzunahme führen. Bei den Messungen wurde die Temperaturüberhöhung über die Verlustleistung der DMS-Widerstände eingestellt. Der Zusammenhang zwischen Temperaturdifferenz und DMS-Leistung wurde zu ΔT = 0,084 PDMS ermittelt [Bar93].
 
 Bei der Simulation mit ANSYS50 wurde ein zweidimensionales Modell nach Bild 1 mit homogenen Temperaturlasten definiert (bf,all,temp,...). Mit diesem Modell wurde ein nichtlinearer statischer Berechnungslauf (antype,static) durchgeführt, bei dem 'large deflection', 'stress stiffening' und 'prestress' berücksichtigt wurden. In diesem Berechnungslauf wurden Spannungen ermittelt, die sich infolge der Temperaturlasten einstellen. In einer anschließenden Modalanalyse (antype,modal) wurden die Resonanzfrequenzen berechnet.
 
@@ -51,15 +51,17 @@ Der Sensor ist in der Mitte des Srömungsrohres auf dem Keramikträger befestigt
 
 Mit diesem Modell wurde der Einfluß der Wärmequellen und -senken auf die Temperaturverteilung über dem Sensor ohne Strömungseinfluß untersucht. In Bild 6 ist die berechnete Temperaturverteilung an der Sensoroberfläche dargestellt. Diese Berechnung wurde unter Berücksichtigung folgender Annahmen durchgeführt:
 
-	● Wärmequelle in der Mitte des Resonators:		5109 W/m²,
-	● Wärmequellen am Rand des Resonators:		3109 W/m²
+	● Wärmequelle in der Mitte des Resonators:		5 * 109 W/m²,
+	● Wärmequellen am Rand des Resonators:			3 * 109 W/m²
 	● Wärmesenken an der Unterseite des Keramikträgers:	T = 20°C
 
 
 
 Um einen Anhaltspunkt über die tatsächliche Temperaturverteilung an der Sensoroberfläche zu erhalten, wurden Thermographiemessungen (IR-Aufnahmen) am Sensor durchgeführt [Mes93]. In der Simulation wurde versucht diese Temperaturverteilung nachzubilden. Die maximale Temperatur in Balkenmitte beträgt etwa 100°C, der Temperaturunterschied zu den Sensorrändern ungefähr 26°C.
 
-Mit diesem Modell und den oben beschriebenen thermischen Randbedingungen wurde die Temperaturverteilung in Abhängigkeit der Strömungsgeschwindigkeit berechnet. Dazu wurde zuerst die reine Geschwindigkeitsverteilung (T = const.) berechnet, bei der die elementspezifische Reynoldszahl auf eins gesetzt wurde (icnode(velo,stokes)), um eine gut konvergierende Lösung zu erhalten. In Bild 7a ist die Geschwindigkeitsverteilung für eine Anfangsgeschwindigkeit am Rohreintritt von v0 = 0,6 m/s dargestellt. Diese Geschwindigkeitsverteilung wurde als Anfangsbedingung bei der gekoppelten Geschwindigkeits-Temperaturfeld-Berechnung vorgegeben. In Bild 7b ist die zugehörige Temperaturverteilung dargestellt.
+Mit diesem Modell und den oben beschriebenen thermischen Randbedingungen wurde die Temperaturverteilung in Abhängigkeit der Strömungsgeschwindigkeit berechnet. Dazu wurde zuerst die reine Geschwindigkeitsverteilung (T = const.) berechnet, bei der die elementspezifische Reynoldszahl auf eins gesetzt wurde (icnode(velo,stokes)), um eine gut konvergierende Lösung zu erhalten. 
+In Bild 7a ist die Geschwindigkeitsverteilung für eine Anfangsgeschwindigkeit am Rohreintritt von v0 = 0,6 m/s dargestellt. Diese Geschwindigkeitsverteilung wurde als Anfangsbedingung bei der gekoppelten Geschwindigkeits-Temperaturfeld-Berechnung vorgegeben. 
+In Bild 7b ist die zugehörige Temperaturverteilung dargestellt.
 
 Bei allen Berechnungen mit FIDAP wurde der direkte "successive substitution" Gleichungslöser eingesetzt. Der Druck-Freiheitsgrad wurde mit der "penalty-Funktion" eliminiert, was zu einem Modell mit 24177 Freiheitsgraden führte. Die Rechenzeiten auf einer HP730 betrugen zwischen 15 min für die Berechnung der Temperaturverteilung ohne Strömung und 1h für die Berechnung des Geschwindigkeitsfeldes bei einer Anfangsgeschwindigkeit von v0 = 2 m/s am Rohreintritt.
 
@@ -72,10 +74,7 @@ Die Modellgenerierung erfolgt in ANSYS44A. Über die Schnittstelle ANSFID werden
 
 Um den Einfluß verschiedener Modellparameter auf die Sensorkennlinie zu untersuchen, wurden verschiedene Modelle berechnet. In Bild 9 ist die Sensorkennlinie für zwei verschiedene Modelle dargestellt. Die beiden Modelle unterscheiden sich durch unterschiedliche Wärmequellen und -senken. Es wurde jedoch darauf geachtet, daß bei beiden Modellen die Temperaturverteilung ohne Strömung näherungsweise mit den gemessenen Werten identisch ist.
 
-
-
 Die Empfindlichkeit des Sensors ohne Wärmesenke beträgt etwa 2500 Hz / m/s und ist erheblich höher als die Empfindlichkeit des Sensors mit  Wärmesenke,  die  ungefähr  130 Hz / m/s beträgt. Die größte Frequenzänderung findet im Bereich zwischen 0 und 1 m/s statt, da in diesem Bereich der Temperaturgradient am größten ist. Der charakteristische V-förmige Verlauf (siehe Bild 2) ist bei diesen Kurven nicht zu beobachten. Das liegt zum einen daran, daß der Keramikträger berücksichtigt wurde und zum anderen liegen bei diesen Strömungsgeschwindigkeiten die Sensortemperaturen oberhalb der kritischen Temperatur. Bei dem Modell mit Wärmesenken liegen die maximalen Temperaturen zwischen 85 und 100°C, bei dem Sensor ohne Wärmesenke zwischen 28 und 100°C.
-
 
 
 
@@ -86,7 +85,6 @@ Zur Charakterisierung des mechanischen Verhaltens eines frequenzanalogen Siliziu
 Zur gekoppelten Fluid-Struktur-Berechnung war es erforderlich, die Programmpakete ANSYS und FIDAP über vorhandene Schnittstellen zu verbinden. Es zeigte sich, daß die Übertragung der Modelldaten von ANSYS nach FIDAP mit dem Programm ANSFID und die Übertragung der Knotentemperaturen von FIDAP nach ANSYS problemlos funktionieren. Aufgrund der gekoppelten Berechnung, war es erforderlich für die strömungs- und strukturmechanische Simulation ein Geometriemodell zu erstellen, das allen Modellierungsanforderungen entspricht. Dabei sind vor allem die Anforderungen, die durch die strömungsmechanische Simulation an die Vernetzung (Element-Aspektverhältnis) gestellt werden, zu beachten.
 
 Es wurde gezeigt, daß die gekoppelte Fluid-Struktur-Berechnung mit den Programmpaketen ANSYS und FIDAP zwar möglich ist, aber die Ergebnisse der gekoppelten Berechnung nur qualitativ mit experimentell ermittelten Werten übereinstimmen. Bei der strömungsmechanischen Simulation wurde ein zweidimensionales Modell verwendet, bei dem mit einer laminaren Strömung gerechnet wurde und die thermischen und mechanischen Randbedingungen nicht genau bekannt waren. Diese Vereinfachungen und Vernachlässigungen sind im wesentlichen für die von den Messungen abweichenden Ergebnisse verantwortlich. Aus Rechenzeitgründen sind jedoch künftige dreidimensionale Simulationen nur mit einem voroptimierten FE-Modell sinnvoll.
-
 
 
 
