@@ -2,8 +2,7 @@ FE-Modellierung für den Entwurf resonanter Mikrosensoren
 
 Th.Fabula
 
-Hahn-Schickard-Institut für 
-Mikro- und Informationstechnik, VS-Villingen
+Hahn-Schickard-Institut für Mikro- und Informationstechnik, VS-Villingen
 
 
 Bei der Realisierung von mikromechanischen Systemen sind für die Bauelementfunktion die technologisch zu realisierenden Funktionsprinzipien und die prozeßtechnischen Randbedingungen bereits in der Entwurfsphase zu berücksichtigen. Reale mikromechanische Komponenten zeigen aufgrund der Miniaturisierung und des hohen Integrationsgrades eine starke Wechselwirkung verschiedener physikalischer Einflußgrößen, die zu einer Überlagerung von unerwünschten Störeinflüssen führen können. Mit Hilfe der Finite-Elemente Methode werden der Einfluß der physikalischer Parameter auf das Systemverhalten und die Auswirkung prozeßabhängiger Materialeigenschaften mikrotechnisch hergestellter Dünnschichtsysteme modelliert. Die Ergebnisse gekoppelter Finite-Elemente Berechnungen unter Einschluß innerer Schichtspannungen und die Berücksichtigung der piezoelektrischen Anregung an mikromechanischen Strukturen in Dünnschichtaufbau (sog. Multilayerstrukturen) ermöglichen eine gezielte Vorhersage des Verhaltens von piezoelektrisch angeregten Dünnschichtsystemen.
