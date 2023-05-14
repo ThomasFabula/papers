@@ -2,9 +2,9 @@ Titel: RESONANT SILICON FORCE AND PRESSURE SENSORS BASED ON PIEZOELECTRIC THIN F
 
 Year: 1994
 
-Authors: Th. Fabula*, G. Flik** and F. Lärmer**
+Authors: Th. Fabula*, G. Flik** and F. LÃ¤rmer**
 
-*  Institut für Mikro- und Informationstechnik der Hahn-Schickard-Gesellschaft für angewandte Forschung e.V., Wilhelm-Schickard-Strasse 10, D-7730 Villingen-Schwenningen, F.R.G.
+*  Institut fÃ¼r Mikro- und Informationstechnik der Hahn-Schickard-Gesellschaft fÃ¼r angewandte Forschung e.V., Wilhelm-Schickard-Strasse 10, D-7730 Villingen-Schwenningen, F.R.G.
 
 ** Robert Bosch GmbH, Abt. ZWD, Postfach 10 60 50, D-7000 Stuttgart 10, F.R.G.
 
@@ -12,10 +12,20 @@ Authors: Th. Fabula*, G. Flik** and F. Lärmer**
 
 Abstract
 
-This paper presents resonant force and pressure sensors with semidigital frequency output comprising piezoelectric ZnO thin films for excitation and detection of the beam and diaphragm resonators. Special interest was given to the technological process integration, i.e. passivation of the ZnO layer and separation of the beam structures. An elaborate sensor design was achieved by structuring of the electrodes to optimize mode selectivity and minimizing electrical cross-talk effects.
+This paper presents resonant force and pressure sensors with semidigital frequency output comprising piezoelectric ZnO thin films for excitation and 
+detection of the beam and diaphragm resonators. Special interest was given to the technological process integration, i.e. passivation of the ZnO layer 
+and separation of the beam structures. An elaborate sensor design was achieved by structuring of the electrodes to optimize mode selectivity and minimizing 
+electrical cross-talk effects.
 
-The fabrication process of the sensor devices consists of p++-doping and backside wet ecthing of the membranes in <100>-silicon substrate. The piezoelectric ZnO transducer layer is deposited by rf-sputtering and subsequently wet etched. Top electrodes were realized by Al-metalization and following passivation. The resonator beams of the force sensor are separated by plasma etching techniques, i.e. propagation ion etching (PIE) with high selectivity and high etch rates up to 10 ?m/min in silicon.
+The fabrication process of the sensor devices consists of p++-doping and backside wet ecthing of the membranes in <100>-silicon substrate. The piezoelectric 
+ZnO transducer layer is deposited by rf-sputtering and subsequently wet etched. Top electrodes were realized by Al-metalization and following passivation. 
+The resonator beams of the force sensor are separated by plasma etching techniques, i.e. propagation ion etching (PIE) with high selectivity and high etch 
+rates up to 10 ?m/min in silicon.
 
-Extensive finite element modeling has been carried out to determine the static and dynamic behavior and to obtain an optimum sensor performance. Considering the piezoelectric excitation the effective electromechanical coupling factor and the impedance/phase-characteristics of the sensor devices were calculated leading to an optimium thickness of the ZnO layer. 
+Extensive finite element modeling has been carried out to determine the static and dynamic behavior and to obtain an optimum sensor performance. Considering 
+the piezoelectric excitation the effective electromechanical coupling factor and the impedance/phase-characteristics of the sensor devices were calculated 
+leading to an optimium thickness of the ZnO layer. 
 
-The resonant sensors have been experimentally characterized by means of optical and electrical measurement techniques and show a good mode selectivity, high force and pressure sensitivities combined with a low temperature cross-sensitivity. Investigations of the long term stability due to load and temperature cycles has been carried out successfully.
+The resonant sensors have been experimentally characterized by means of optical and electrical measurement techniques and show a good mode selectivity, 
+high force and pressure sensitivities combined with a low temperature cross-sensitivity. Investigations of the long term stability due to load and 
+temperature cycles has been carried out successfully.
