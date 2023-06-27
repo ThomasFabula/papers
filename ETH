@@ -1,0 +1,25 @@
+Themenvorschlag für das Seminar: 
+"Numerische Modellierung und Simulation von Sensoren"
+17.09.1992 ETH-Zentrum Zürich, Schweiz
+
+Dipl.-Phys. Thomas Fabula
+Hahn-Schickard-Institut für Mikro- und Informationstechnik, VS-Villingen
+Roggenbachstraße 6, D-7730 VS-Villingen
+Tel.:	07721 - 2002 - 31
+Fax:	07721 - 2002 - 29
+
+Im Hahn-Schickard-Institut wird u.a. das kommerzielle FEM-Programmsystem ANSYS für den Entwurf und die Auslegung von 
+mikromechanischen Strukturen eingesetzt. Im Vordergrund stehen statische und dynamische Berechnungen an unterschiedlichen 
+Sensor- und Aktorstrukturen auf der Basis von einkristallinem Silizium und Quarz (Beispiel: resonante Silizium-Drucksensoren 
+und Quarz-Kraftsensoren). Von besonderem Interesse sind hierbei die Berücksichtigung folgender Einflüsse bei der Modellierung:
+
+- physikalische Störgrößen (z.B. Temperatur, mechan. Schock, EMV-Problematik)
+- Materialeigenschaften mikrotechnisch hergestellter Dünnschichtsysteme 
+- innere Spannungen in Multilayer-Schichtsystemen
+- piezoelektrische Anregung und Detektion
+- Kopplung der FEM-Ergebnisse (mechanisch, thermisch, piezoelektrisch) mit einem elektrischen Analogsimulator 
+(z.B. SPICE, etc.) und Ableitung von Ersatzschaltbildern mit dem Ziel den mikromechanischen Sensor mit der 
+Signalverarbeitung zu beschreiben
+- Nichtlinearitäten, speziell: 
+	* dynamische NL infolge großer Schwingungsamplituden
+	* Großsignalverhalten von Aktoren (Elektrostriktion)
