@@ -1,4 +1,4 @@
-# papers
+# Papers
 
 ## Papers &amp; Publications
 - https://tfconsult.com/publications/
