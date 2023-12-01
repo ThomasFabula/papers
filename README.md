@@ -1,6 +1,7 @@
 # Papers
 
 ## Publications
+Papers in scientific & technical journals
 - https://tfconsult.com/publications/
 
 ## Patent
