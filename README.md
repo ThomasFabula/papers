@@ -5,8 +5,13 @@ Papers in scientific & technical journals
 - https://tfconsult.com/publications/
 
 ## Patent
+Monolithically integrated semiconductor element, use thereof and method for producing such a semiconductor element:
 - https://tfconsult.com/mems-patent/
 - https://github.com/ThomasFabula/Patent
+
+## Invention disclosure
+Invention while working at the Corporate Service Center Research & Development of Deutsche Telekom AG:
+- https://tfconsult.com/erfindungsmeldung-mailfon/  
 
 ## Further public sources
 - Research Gate: www.researchgate.net/profile/Thomas-Fabula
