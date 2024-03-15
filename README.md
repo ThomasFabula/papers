@@ -9,7 +9,7 @@ Monolithically integrated semiconductor element, use thereof and method for prod
 - https://tfconsult.com/mems-patent/
 - https://github.com/ThomasFabula/Patent
 
-## Invention disclosure
+## Invention 
 Invention while working at the Corporate Service Center Research & Development of Deutsche Telekom AG (Headquarter Bonn):
 - https://tfconsult.com/erfindungsmeldung-mailfon/  
 
