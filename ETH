@@ -21,5 +21,6 @@ und Quarz-Kraftsensoren). Von besonderem Interesse sind hierbei die Berücksicht
 (z.B. SPICE, etc.) und Ableitung von Ersatzschaltbildern mit dem Ziel den mikromechanischen Sensor mit der 
 Signalverarbeitung zu beschreiben
 - Nichtlinearitäten, speziell: 
-	* dynamische NL infolge großer Schwingungsamplituden
-	* Großsignalverhalten von Aktoren (Elektrostriktion)
+-- dynamische NL infolge großer Schwingungsamplituden
+-- Großsignalverhalten von Aktoren (Elektrostriktion)
+
