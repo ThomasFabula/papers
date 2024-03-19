@@ -1,0 +1,12 @@
+Th. Fabula, H.-J. Wagner, B. Schmidt, S. Büttgenbach,
+Triple-beam resonant silicon force sensor based on piezoelectric thin films,
+Sensors and Actuators A: Physical,
+Volume 42, Issues 1–3,
+1994,
+Pages 375-380,
+ISSN 0924-4247,
+https://doi.org/10.1016/0924-4247(94)80015-4.
+(https://www.sciencedirect.com/science/article/pii/0924424794800154)
+
+Abstract: 
+A resonant force sensor with semidigital frequency output based on a triple-beam resonator structure in silicon is presented. The piezoelectric excitation of the resonator operating in an antisymmetric vibration mode is realized by thin-film zinc oxide layers. An advantage of this triple-beam design is a high mechanical quality factor combined with high force sensitivity due to the antisymmetric vibration mode and the load-dependent stress concentration in the triple beam. Extensive finite-element modelling has been carried out to determine the static and dynamic behaviour and to obtain optimum sensor performance. Several resonator designs have been fabricated to study mechanical decoupling from the clamping region. Experimental characterization of the triple-beam sensor and of the zinc oxide thin-film properties has been performed.
