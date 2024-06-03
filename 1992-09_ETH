@@ -20,7 +20,7 @@ und Quarz-Kraftsensoren). Von besonderem Interesse sind hierbei die Berücksicht
 - Kopplung der FEM-Ergebnisse (mechanisch, thermisch, piezoelektrisch) mit einem elektrischen Analogsimulator 
 (z.B. SPICE, etc.) und Ableitung von Ersatzschaltbildern mit dem Ziel den mikromechanischen Sensor mit der 
 Signalverarbeitung zu beschreiben
-- Nichtlinearitäten, speziell: 
+- Nichtlinearitäten (NL), speziell: 
 -- dynamische NL infolge großer Schwingungsamplituden
 -- Großsignalverhalten von Aktoren (Elektrostriktion)
 
