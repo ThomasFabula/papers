@@ -5,7 +5,7 @@ Papers in scientific & technical journals
 - https://tfconsult.com/publications/
 
 ## Patent
-Monolithically integrated semiconductor element, use thereof and method for producing such a semiconductor element:
+Work at HSG-IMIT: Monolithically integrated semiconductor element, use thereof and method for producing such a semiconductor element:
 - https://tfconsult.com/mems-patent/
 - https://github.com/ThomasFabula/Patent
 
