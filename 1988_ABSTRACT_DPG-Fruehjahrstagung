@@ -1,0 +1,25 @@
+
+ABSTRACT für die DPG-Frühjahrstagung 1988 
+Deutsche Physikalische Gesellschaft 
+
+
+Echtzeit-Meßwerterfassungssystem für die Hochfrequenz- und Laserspektroskopie
+
+T.Fabula, S.Büttgenbach*, T.Brenner, W.Rupprecht
+(Institut für Angewandte Physik, Universität Bonn)
+
+
+Auf der Basis eines handelsüblichen PC-XT kompatiblen Rechners wurde ein leistungsfähiges, 
+in 'Echtzeit' arbeitendes Zwei-Prozessor-Rechnersystem aufgebaut. Die Entlastung des
+Hostcomputers (PC) von der zeitkritischen Meßwerterfassung wird durch ein autonomes 
+Subsystem (Z80-ECB) gewährleistet. Eine zeitlich asynchrone Rechnerkopplung der beiden 
+Rechner mit Hilfe von Hardware-FIFOs erlaubt schnellste Datentransferraten im MHz-Bereich. 
+Ein genormter Interface-I/O-Bus (IOB) bietet die Anschlußmöglichkeit verschiedenster 
+Meßmodule an das Experiment. 
+
+Das Meßwerterfassungssystem wurde erfolgreich bei der polarisationsspektroskopischen 
+Vermessung der Hyperfeinstruktur (Hfs) und Isotopieverschiebung (IS) an Zirkon in einer 
+Hohlkathodengasentladung eingesetzt.
+
+
+* Forschungsinstitut der Forschungsgesellschaft für Feingeräte-, Mikro- und Uhrentechnik (FFMU), Stuttgart
