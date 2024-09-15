@@ -1,0 +1,94 @@
+Postervortrag des
+
+Hahn-Schickard-Instituts für
+Mikro- und Informationstechnik
+
+anläßlich der 
+
+MICROSYSTEM - Technologies 90
+ICC Berlin, 10.-13. September 1990
+
+
+Thema:  "FEM-Simulationsrechnungen an Mikrostrukturen" 
+
+
+FEM-Simulationsrechnungen an Mikrostrukturen 
+
+1.) Statische FEM-Berechnung:
+
+Beispiel:	Silizium-(100)-Membran als Grundstruktur für einen Drucksensor
+
+Eingabedaten: 	
+- Strukturgeometrie
+- Materialeigenschaften
+- Randbedingungen
+
+FE-Modell:	Beschreibung der Membran durch 2D-Schalenelemente
+			Anzahl Elemente:	439
+			Anzahl Knoten:		441
+			Elementgröße:		0.5 mm				
+
+
+Gesamtsystem wird beschrieben durch folgende Gleichung:
+
+	[K] * {u} = {F}		
+
+			[K] : Gesamtsteifigkeitsmatrix
+			{u} : Knotenverschiebungen
+			{F} : angreifende Kräfte
+
+
+Numerische Berechnung von : 
+
+A.) Membranauslenkung in z-Richtung
+
+B.) Spannungszustand der Membran
+
+
+UZ [mm]           Save [N/mm²]       
+2.) Dynamische FEM-Berechnung:
+
+Beispiel:	
+Verwendung einer Quarz-Doppelstimmgabel als resonanter Kraftsensor
+
+Strukturgeometrie:
+Randbedingungen:
+
+FE-Modell:	
+Beschreibung der Doppelstimmgabel durch 8-knotige, isoparametrische
+2D-Plattenelemente mit ebenem Spannungszustand
+
+Anzahl Elemente:	222
+Anzahl Knoten:		820
+Elementgröße:		0.2 mm			
+
+Gesamtsystem wird beschrieben durch folgende Differentialgleichung:
+
+[M]*{u} + [C]*{u} + [K]*{u} = {F(t)}
+
+[M] : Gesamtmassenmatrix
+[C] : Gesamtdämpfungsmatrix
+[K] : Gesamtsteifigkeitsmatrix
+{u} : Knotenbeschleunigungen
+{u} : Knotengeschwindigkeiten
+{u} : Knotenverschiebungen
+{F(t)} : zeitabhängige Anregungskraft
+
+
+A.) Modalanalyse: 
+Berechnung der Eigenfrequenzen und transversalen Eigenschwingungsformen
+
+B.) Kraft-Frequenz-Kennlinie:
+Änderung der Resonanzfrequenz des
+2. Modes infolge axialer Kraftbeaufschlagung Fx
+
+<- Druck	Zug ->
+
+Mode 1 : 	f1 =   44.5 kHz
+Mode 2 : 	f2 =   45.0 kHz
+Mode 3 : 	f3 = 118.8 kHz
+
+Frequenz f [Hz]	Kraft Fx [N]
+
+Einspannung	Freiheitsgrade
+Flächenlast Fx
