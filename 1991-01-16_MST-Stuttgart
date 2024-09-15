@@ -1,0 +1,349 @@
+Fachausschuß Mikrosystemtechnik in der
+VDE/VDI-Gesellschaft Mikroelektronik und
+Hahn-Schickard-Gesellschaft für angewandte Forschung e.V.
+
+Vortragsveranstaltung
+
+Mikrosystemtechnik
+
+Max-Planck-Institut für Festkörperforschung,
+Stuttgart-Büsnau
+
+16. Januar 1991
+
+
+"Modellierung mikromechanischer Sensoren mit der Methode der Finiten Elemente"
+
+Th.Fabula, B.Schmidt
+
+Hahn-Schickard Institut für Mikro- und Informationstechnik,
+Villingen-Schwenningen
+
+
+Modellierung mikromechanischer Sensoren mit der Methode der Finiten Elemente
+
+
+Th.Fabula, B.Schmidt
+
+Hahn-Schickard-Institut für Mikro- und Informationstechnik,
+Villingen-Schwenningen
+
+
+	A.)	Statische Berechnungen am Beispiel eines piezoresistiven Silizium-Drucksensors
+
+
+	B.)	Dynamische Berechnung eines resonanten Kraftsensors auf Quarzbasis
+──────────────────────────
+Hahn-Schickard-Institut für Mikro- und Informationstechnik, Villingen-Schwenningen
+──────────────────────────
+
+
+
+Modellierung mikromechanischer Sensoren mit der Methode der Finiten Elemente
+
+Th.Fabula, B.Schmidt
+
+
+
+	A.)	Statische Berechnungen am Beispiel eines piezoresistiven Silizium-Drucksensors
+
+
+	B.)	Dynamische Berechnung eines resonanten Kraftsensors auf QuarzbasisGliederung 
+
+	A.)	Statische FEM-Berechnungen
+
+		▪ 2D FEM-Berechnung
+		▪ Nichtlineare Effekte
+		▪ 3D-Membranstrukturen
+		▪ Sensorkennlinie
+
+
+	B.)	Dynamische FEM-Berechnungen
+
+		▪ Modalanalyse
+		▪ Kraft-Frequenz-Kennlinie
+		▪ Frequenzganganalyse
+		▪ Temperaturabhängigkeit
+
+
+A.) Statische FEM-Berechnungen 
+Beispiel:	piezoresistiver Silizium-Drucksensor
+
+
+	▪ Funktionsprinzip:
+	Druckbeaufschlagung p ⇒ Membranauslenkung ⇒
+	⇒ Membranspannung σ ⇒ Widerstandsänderung
+
+
+	▪ Sensorkennlinie ist charakterisiert durch:
+		• Druckempfindlichkeit
+		• Linearität
+		• Temperaturempfindlichkeit
+		• Überlasteigenschaft
+
+
+	▪ Einflußgrößen:
+		• Materialeigenschaften
+		• Kristallorientierung
+		• Membrangeometrie
+		• Widerstandsdesign
+		• Aufbau- und Verbindungstechnik
+
+Δρi/ρ =  πikσk = f(Δp)
+
+Spannungsverlauf: Membranoberfläche
+1.) analytische Lösung (lineare Kirchhoffsche Theorie)
+
+	σR(r) = 3/8  (a/h)2  [(3+ν)(r/a)2 - (1+ν)]  Δp
+	σT(r) = 3/8  (a/h)2  [(1+3ν)(r/a)2 - (1+ν)]  Δp
+
+
+
+Widerstandsänderung:
+
+ΔR/R = πLσL + πTσT = f(Δp)
+
+
+Beispiel:	• quadratische Si(100)-Membran
+
+
+		• p-dotierte Si-Widerstände in <110>-Richtung:
+				Π := πL ≈ - πT ≈ 710-10 Pa-1
+
+		• trans. und long. Widerstandsdesign
+
+		• Wheatstonesche Brückenschaltung:
+
+ΔR/R ≈ Π(σL - σT) ≈ ΠσL (1 - ν)
+2.) FEM-Lösung (zweidimensionales Modell)
+
+[K]{u} = {F}
+
+Berechnung einer dünnen Silizium-Membranstruktur:
+
+	• Membranabmessung:	100 μm x 100 μm
+	• Membrandicke:			h = 1 μm
+  	• Druckbeaufschlagung:	Δp = 1 bar = 105 Pa
+
+
+Spannungsverlauf: Membranoberfläche
+
+
+Spannung σX (N/mm2)
+
+ k,m 			σX 			σY 
+
+Membrandruck (mbar)
+
+
+Si(100)			[110]		[110]
+
+Widerstandslayout
+
+Berechnete Spannungsverteilung
+
+
+		• max. Zugspannung:	σX ≈ 2.7  108 Pa
+  	• max. Auslenkung:	UZ ≈ 0.8 μm
+
+
+Positionierung der piezoresistiven Widerstände im Bereich größter Biegespannungen
+3.) Nichtlinearität der Kennlinie
+	▪ Membran-Nichtlinearität:
+		Dehnung der neutralen Ebene durch zusätzliche innere Zugspannung σZug ( ∼ p2  (a/h)6 )
+		FEM:   große Auslenkungen (≈Membrandicke)
+			⇒  Spannungsversteifung der Membran
+
+
+	▪ Nichtlinearität des piezoresistiven Effektes:
+
+			Δρi/ρ  =  πikσk + πikmσkσm + ...
+
+		(Kompensation durch eine Wheatstone-Brücke mit long. und trans. Widerstandsdesign)
+
+
+	▪ temperaturbedingte Nichtlinearitäten:
+		FEM:  temp.abh. Materialeigenschaften: Eik(T)
+
+
+	Finite-Elemente-Modellierung:
+	⇒	Minimierung des Linearitätsfehlers NL
+	⇒	Maximierung der Druckempfindlichkeit S
+
+Nichtlineare FE-Berechnungen
+
+
+	• Material-Nichtlinearität (anisotroper E-Modul)
+
+	• verschiedene Materialien (Si, SiO2, Si3N4, Pyrex ...) 
+
+	• Spannungsversteifung der Membran:  K = f(Δp)
+
+	• große Auslenkungen ( ≈ Membrandicke)
+
+	• temperaturabhängige Materialeigenschaften
+
+
+FEM   ⇒   Iterative Lösungsalgorithmen nötig
+3D-Membranstrukturen
+Berücksichtigung von:	• Membraneinspannung
+						• Membranstrukturierung
+						• Materialanisotropie
+
+ebene Si(100)-Membran
+
+
+Si(100)-Membran mit einfach-BOSS
+
+
+Si(100)-Membran mit zweifach-BOSS
+
+
+B.) Dynamische FEM-Berechnungen
+Beispiel:	
+Quarzdoppelstimmgabel als resonanter Kraftsensor
+
+▪ Funktionsprinzip:
+	Kraftbeaufschlagung ⇒ Resonatorvorspannung ⇒
+	Resonanzfrequenzänderung Δf
+
+
+	• l = 5 mm, w = 0.2 mm, t = 0.1 mm
+	• anisotroper E-Modul (Z-Schnitt)
+	• Eigenfrequenzen:	f ∼ w/l2  √(E/ρ)
+
+
+1.) Modalanalyse:		[M]{u} + [K]{u} = 0
+
+	• Berechnung der Eigenfrequenzen fi
+	• Berechnung der Eigenschwingungsformen
+
+
+Modenspektrum der 
+Quarz-Doppelstimmgabel
+
+
+	• Biegeschwingungen in z-Richtung
+	• Biegeschwingungen in y-Richtung
+	• überlagerte Schwingungszustände (x-y-z)
+
+
+Frequenz (kHz)
+
+Temperatur (°C)
+
+3.) Frequenzganganalyse:
+	• harmonische Anregung: 	{F(t)} = {F0}eiωt
+	• Dämpfungsmatrix C wird bezogen auf die Massen-
+	  und Steifigkeitsmatrix M, K:
+[C] = α[M] + β[K] + [sonst. Beiträge]
+Frequenz (kHz)
+
+x		y		z
+
+1.		2.		3.		4.		5.
+
+mode #		f (kHz)
+
+
+43.2	47.9	92.9	131.8	134.09
+
+y-S1	y-A1	y-S2	y-A2	y-S3
+Eigenschwingungsformen
+
+
+Eigenschwingungsform
+Resonanzfrequenz:	f ≈ 23.0 kHz
+	(leff = 3.011 mm, weff = 0.88 mm)
+
+Kraftempfindlichkeit: 	
+	• analytisch:		ηtheo ≈ 53.4 %/N
+	• numerisch:		ηFEM ≈ 51.5 %/N
+
+	⇒  Abweichung: 	(ηtheo - ηFEM)/ηtheo = 3.6 %
+
+Sensorkennlinie
+
+
+force vs. frequency
+
+force-frequency characteristics
+
+flexure mode shapes
+
+
+2.) Kraft-Frequenz-Kennlinie
+
+• Steifigkeitsänderung infolge Vorspannung S:
+[M]{u} + ([K] + [S]){u} = 0
+
+• Kraftempfindlichkeit		η = Δf/Δσ  1/fi = f(S)
+
+Abhängigkeit der Kraftempfindlichkeit η von der Stimmgabelbreite w:
+η ∼ 1/E  (l/w)2  F/(wt)
+
+
+
+S = Δf/ΔF  1/f0 ≈ 1.8 ‰/N
+NL < 0.1 %  (full scale)
+
+force F (N)			frequency f (kHz)
+
+
+Mode i
+
+ηrel 			k,m 
+
+Stimmgabelbreite w/w0
+
+w0 = 0.2 mm
+
+
+3.) Frequenzganganalyse
+
+Berechnung des Amplitudenspektrums A(f):
+
+[M]{u} + [C]{u} + [K]{u} = {F(t)}
+
+(mechanische Anregung F(t), konstante Dämpfung)
+
+
+Bestimmend für mikromechanischen Resonator:
+	• mechanische Schwingungsgüte Q (∼1/Dämpfung)
+	• Unimodalität im Arbeitsbereich
+4.) Temperaturabhängigkeit
+
+Berechnung der Temperaturabhängigkeit der Resonanzfrequenz f0(T) des Schwingungsmodes y-A1:
+
+• therm. Ausdehnung:	α = f(T)		⇒	l=l(T)
+• E-Modul cik:			cik = f(T)	⇒	[K]
+
+
+Temperaturverhalten abhängig von:
+	• Quarz-Kristallschnitt
+	• Resonatorabmessungen
+
+Zusammenfassung
+
+
+Am Hahn-Schickard-Institut für Mikro- und Informationstechnik wurde mit Hilfe von FEM-Berechnungen untersucht:
+
+
+▪	Verhalten miniaturisierter Si-Drucksensoren (Membran-Abmessungen: 100 μm x 100 μm)
+
+▪	Verbesserung der Linearität bei piezoresistiven Drucksensoren durch Strukturierung der Membranen
+
+▪	Einsatzmöglichkeiten der dynamischen FEM-Berechnungen für resonanten Sensoren unter Einbeziehung thermischer und nichtlinearer Effekte
+Ergebnisse
+
+
+Zur Modellierung mikromechanischer Sensoren wurden für die gezeigten Anwendungen parametrisierte FE-Modelle erstellt.
+
+
+Diese ermöglichen:
+
+	1.)	Modellierung von Sensorkonzepten
+
+	2.)	Optimierung des Sensordesigns
+
+	3.)	Berücksichtigung prozeßtechnischer Einflüsse
